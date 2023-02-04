@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import FacebookLogo from './icons/facebookLogo';
-import SearchIcon from './icons/searchIcon';
-import Plus from './icons/plus';
-import Messenger from './icons/messenger';
-import DownArrow from './icons/downArrow';
-import Bell from './icons/bell';
-import Home from './icons/home';
-import Watch from './icons/watch';
-import Groups from './icons/groups';
-import Feed from './icons/feed';
-import TimelineHeader from './components/TimelineHeader';
-import Intro from './components/Intro';
+import FacebookLogo from '../icons/facebookLogo';
+import SearchIcon from '../icons/searchIcon';
+import Plus from '../icons/plus';
+import Messenger from '../icons/messenger';
+import DownArrow from '../icons/downArrow';
+import Bell from '../icons/bell';
+import Home from '../icons/home';
+import Watch from '../icons/watch';
+import Groups from '../icons/groups';
+import Feed from '../icons/feed';
 
-import Tabs from './components/Tabs';
-function App() {
+export default function Navbar() {
   return (
-    <div className="App">
-       <div>
-      <div className="h-14 flex justify-between w-screen shadow-fb px-4 py-2  max-[450px]:text-[26px]">
-        <div className="flex">
+    <div>
+      <div className="h-14 flex justify-between w-screen shadow-fb px-4 py-2">
+        <div className="flex ">
           <FacebookLogo />
           <div className="h-10 w-64 ml-2 flex items-center rounded-full bg-fFill p-3">
             <SearchIcon />
@@ -30,7 +24,7 @@ function App() {
           </div>
         </div>
 
-        <div className="flex space-x-24 items-center max-[450px]:hidden">
+        <div className="flex space-x-24 items-center">
           <button className="focus:outline-none">
             <Home />
           </button>
@@ -46,7 +40,7 @@ function App() {
         </div>
 
         <div className="flex space-x-2">
-          <button className="h-9 p-0.5 flex items-center rounded-full focus:outline-none max-[450px]:hidden">
+          <button className="h-9 p-0.5 flex items-center rounded-full focus:outline-none">
             <img
               src="/pro.jpg"
               className="rounded-full border w-9 border-fButton"
@@ -57,14 +51,14 @@ function App() {
             </div>
           </button>
 
-          <div className="w-10 bg-fButton flex items-center justify-center relative rounded-full max-[450px]:hidden">
+          <div className="w-10 bg-fButton flex items-center justify-center relative rounded-full ">
             <div className="absolute rounded-full bg-fRed w-5 h-5 z-50 inset-x-6 -top-1 hidden">
               <div className="text-sm text-white text-center">3</div>
             </div>
             <Plus />
           </div>
 
-          <div className="w-10 bg-fButton flex items-center justify-center relative rounded-full max-[450px]:text-[26px] ">
+          <div className="w-10 bg-fButton flex items-center justify-center relative rounded-full">
             <div className="absolute rounded-full bg-fRed w-5 h-5 z-50 inset-x-6 -top-1 hidden">
               <div className="text-sm text-white text-center">3</div>
             </div>
@@ -88,16 +82,5 @@ function App() {
         </div>
       </div>
     </div>
-    <TimelineHeader/>
-    <div className='flex px-44 '>
-    <Tabs/>
-    
- 
-    </div>
-   
-    </div>
-  
   );
 }
-
-export default App;
